@@ -20,6 +20,7 @@ public abstract class Estudiante{
         return givenName;
     }
 
+
     public void setGivenName(String givenName) {
         this.givenName = givenName;
     }
@@ -48,7 +49,15 @@ public abstract class Estudiante{
         this.program = program;
     }
 
-    
+    @Override
+    public String toString() {
+        return " [code=" + code + ", familyName=" + familyName + ", givenName=" + givenName + ", program="
+                + program ;
+    }
+
+    public void graduar() {
+        System.out.println("felicidades, " + this.givenName + " haz completado tu programa de " + this.program);
+    }
 
 
 
